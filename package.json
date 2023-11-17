@@ -3,10 +3,10 @@
   "productName": "ReTelevised",
   "main": "./src/main/index.js",
   "scripts": {
+    "start": "concurrently \"npm run dev\" \"npm run start-electron\"",
     "dev": "next dev",
-    "start": "concurrently \"npm run start-next\" \"npm run start-electron\"",
     "start-next": "next",
-    "start-electron": "electron .",
+    "start-electron": "wait-on http://localhost:3000 && electron .",
     "build": "next build renderer",
     "clean": "rimraf dist renderer/.next renderer/out",
     "pack-app": "npm run build && electron-builder --dir",
@@ -21,11 +21,13 @@
   },
   "devDependencies": {
     "@types/react": "18.2.37",
+    "concurrently": "^8.2.2",
     "electron": "^12.2.3",
     "electron-builder": "^23.6.0",
     "next": "14.0.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "wait-on": "^7.2.0"
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^14.0.2",

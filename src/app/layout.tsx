@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition */
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -23,7 +22,7 @@ export default async function RootLayout({
   return (
     <html lang='en'>
       
-      <body className={`bg-slate-400/70 scrollbar-hide ${inter.className}`}>
+      <body className={`bg-slate-900 scrollbar-hide ${inter.className}`}>
         {children}
       </body>
     </html>
