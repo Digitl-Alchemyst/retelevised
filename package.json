@@ -4,9 +4,9 @@
   "main": "./src/main/index.js",
   "scripts": {
     "start": "concurrently \"npm run dev\" \"npm run start-electron\"",
-    "dev": "next dev",
+    "dev": "next dev -p 4444",
     "start-next": "next",
-    "start-electron": "wait-on http://localhost:3000 && electron .",
+    "start-electron": "wait-on http://localhost:4444 && electron .",
     "build": "next build renderer",
     "clean": "rimraf dist renderer/.next renderer/out",
     "pack-app": "npm run build && electron-builder --dir",
