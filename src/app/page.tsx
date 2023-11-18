@@ -1,9 +1,8 @@
-
-
 export default function HomePage() {
   return (
-    <div>
-      <h1>Hello Electron!</h1>
+    <div className="bg-slate-950">
+      <h1 className="text-red">Hello Electron!</h1>
+      <p>help</p>
     </div>
-  )
+  );
 }

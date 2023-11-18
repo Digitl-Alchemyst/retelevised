@@ -1,11 +1,6 @@
 const { app, BrowserWindow, nativeTheme } = require('electron');
 const path = require('path');
 
-const baseURL =
-  process.env.NODE_ENV === 'production'
-    ? process.env.PRODUCTION_URL || 'placeholder_for_production_url'
-    : 'http://localhost:3333';
-
 let win;
 
 const createWindow = () => {
@@ -19,10 +14,7 @@ const createWindow = () => {
       enableRemoteModule: true,
       contextIsolation: false,
     },
-    
   });
-
-  win.loadURL(baseURL);
 
   win.removeMenu();
 
