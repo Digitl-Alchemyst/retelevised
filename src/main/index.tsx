@@ -18,8 +18,6 @@ const createWindow = () => {
 
   win.removeMenu();
 
-  nativeTheme.themeSource = 'dark';
-
   win.on('closed', () => {
     win = null;
   });

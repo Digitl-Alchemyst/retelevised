@@ -20,6 +20,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.23.3",
+    "@babel/plugin-transform-optional-chaining": "^7.23.3",
     "@types/react": "18.2.37",
     "concurrently": "^8.2.2",
     "electron": "^27.1.0",

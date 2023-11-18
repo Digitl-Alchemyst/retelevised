@@ -1,4 +1,4 @@
-const { devDependencies } = require('../package.json')
+const { devDependencies } = require('../package.json');
 
 module.exports = {
   presets: [
@@ -13,4 +13,21 @@ module.exports = {
       },
     ],
   ],
-}
+  plugins: [
+    [
+      '@babel/plugin-proposal-optional-chaining',
+      {
+        loose: true,
+      },
+    ],
+    '@babel/plugin-proposal-nullish-coalescing-operator',
+    'babel-plugin-styled-components',
+    [
+      '@babel/plugin-transform-react-jsx',
+      {
+        pragma: 'h',
+        pragmaFrag: 'Fragment',
+      },
+    ],
+  ],
+};
